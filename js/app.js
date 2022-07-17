@@ -122,8 +122,8 @@ function multiplyArray() { //eslint-disable-line
 
   // console.log(arrayMulti);
 
-  let arrayReport = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${arrayMulti}.`;
-
+  // let arrayReport = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${arrayMulti}.`;
+  let arrayReport = `The numbers ${testArray} have a product of ${arrayMulti}.`;
   // console.log(arrayReport);
 
   return [arrayMulti, arrayReport];
@@ -132,7 +132,7 @@ function multiplyArray() { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
@@ -153,11 +153,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+function multiplyAnyArray(){ //eslint-disable-line
+  function multiAnyArray() {
+    // console.log(testDynamicArray);
+    let args = Array.from(testDynamicArray);
+    return args.reduce((acc, cur) => acc * cur);
+  }
+  // console.log(multiAnyArray(testDynamicArray));
+  let endmultiAnyArray = multiAnyArray(testDynamicArray);
 
+  let arrayReport = `The numbers ${testDynamicArray} have a product of ${multiAnyArray(testDynamicArray)}.`;
+  return [endmultiAnyArray, arrayReport];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
